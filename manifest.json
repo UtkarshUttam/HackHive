@@ -1,18 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "Google Meet Captions Extractor(try2)",
+    "name": "Text Summarizer",
     "version": "1.0",
-    "description": "Extract captions from Google Meet and store them as a single string.",
-    "permissions": ["activeTab"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://meet.google.com/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
+    "description": "A browser extension to summarize text using TextRazor API",
+    "permissions": [
+        "activeTab"
     ],
     "action": {
       "default_popup": "popup.html",
@@ -26,6 +18,16 @@
       "16": "icon.png",
       "48": "icon.png",
       "128": "icon.png"
-    }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "web_accessible_resources": [{
+      "resources": ["popup.html"],
+      "matches": ["<all_urls>"]
+    }]
   }
   

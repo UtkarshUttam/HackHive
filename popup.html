@@ -1,16 +1,18 @@
+<!-- popup.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Meet Captions Extractor(try2)</title>
-  <link rel="stylesheet" type="text/css" href="popup.css">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Captions Extractor</h2>
-    <div id="captions"></div>
-  </div>
-  <script src="popup.js"></script>
+    <div class="container">
+        <h2>Enter Text to Summarize</h2>
+        <textarea id="inputText" rows="5"></textarea>
+        <button id="summarizeBtn">Summarize</button>
+        <div id="summary"></div>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>

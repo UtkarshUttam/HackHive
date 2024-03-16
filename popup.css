@@ -1,25 +1,27 @@
 /* popup.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    width: 250px;
+body{
+    background-color: #e58b3c;
+}
+.container {
+    width: 400px;
     padding: 20px;
-  }
-  
-  h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  #captions {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
+    border-radius: 15px;
+    /* background-color: violet; */
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
