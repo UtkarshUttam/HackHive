@@ -1,7 +1,8 @@
 ![CoverImage Logo](./Media/MeetSummarizer.png)
 # MeetSummarizer
 
-![MeetSummarizer Logo](icon.png){: width="200px"}</center>
+<!-- ![MeetSummarizer Logo](icon.png){: width="200px"}</center> -->
+<img src="./icon.png" width="100px">
 
 MeetSummarizer is a Google Meet summarizer tool that extracts captions from Google Meet sessions and provides a summarized version of the conversation using an API.
 
