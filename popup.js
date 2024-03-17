@@ -34,3 +34,32 @@ chrome.runtime.onMessage.addListener(function(message) {
     updatePopupUI(message.captions);
   }
 });
+
+// Existing code...
+
+document.getElementById('generateSummaryAndQuizButton').addEventListener('click', function() {
+  chrome.runtime.sendMessage({ action: "generateSummaryAndQuiz" }, function(response) {
+      if (response.summaryAndQuiz) {
+          // Display summary and quiz in popup UI
+          updateSummaryAndQuizUI(response.summaryAndQuiz);
+      } else {
+          // Handle error
+          console.error('Error generating summary and quiz');
+      }
+  });
+});
+
+function updateSummaryAndQuizUI(summaryAndQuiz) {
+  const summaryAndQuizDiv = document.getElementById('summaryAndQuiz');
+  if (summaryAndQuizDiv) {
+      // Clear the previous content of the summaryAndQuiz div
+      summaryAndQuizDiv.innerHTML = "";
+
+      // Create a new paragraph element to display the summary and quiz
+      const paragraph = document.createElement("p");
+      paragraph.textContent = summaryAndQuiz || "No summary and quiz available";
+
+      // Append the paragraph element to the summaryAndQuiz div
+      summaryAndQuizDiv.appendChild(paragraph);
+  }
+}
