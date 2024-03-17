@@ -1,31 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Google Meet Captions Extractor(try2)",
-    "version": "1.0",
-    "description": "Extract captions from Google Meet and store them as a single string.",
-    "permissions": ["activeTab"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://meet.google.com/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-      }
-    },
-    "icons": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
+  "manifest_version": 3,
+  "name": "Google Meet Captions Extractor",
+  "version": "1.0",
+  "description": "Extract captions from Google Meet and display them.",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["content.js"]
     }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   }
+}
   
