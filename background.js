@@ -1,5 +1,5 @@
 let captionsCaptured = ""; // Variable to store captions
-
+console.log("background page loaded")
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if (message.action === "captionsCaptured") {
     captionsCaptured = message.captions; // Store received captions
