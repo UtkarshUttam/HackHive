@@ -1,14 +1,12 @@
 // Function to extract captions
-// Function to extract captions
 function extractCaptions() {
-  // const captionsDiv = document.querySelector('div[jsname="tgaKEf"].iTTPOb.VbkSUe');
   const captionsDiv = document.querySelector('div.iTTPOb.VbkSUe');
-  console.log(captionsDiv)
+  console.log(captionsDiv) // Log the captionsDiv element (for debugging)
   if (!captionsDiv) return null;
 
   // Get all child spans within the div
   const spans = captionsDiv.querySelectorAll('span');
-  console.log(spans)
+  console.log(spans) // Log the spans NodeList (for debugging)
 
   // Combine the text content of all spans into a single string
   let captions = "";
@@ -19,5 +17,6 @@ function extractCaptions() {
   return captions.trim();
 }
 
-// Send extracted captions to the background script
+// Call extractCaptions function whenever you want to update the captions
+// extractCaptions();
 chrome.runtime.sendMessage({ action: "captionsCaptured", captions: extractCaptions() });
