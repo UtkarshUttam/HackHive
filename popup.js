@@ -1,4 +1,5 @@
 // Function to update the popup UI with captions
+
 function updatePopupUI(captions) {
   const captionsDiv = document.getElementById('captions');
   if (captionsDiv) {
@@ -17,6 +18,7 @@ function updatePopupUI(captions) {
 // Button click event listeners
 document.getElementById('startButton').addEventListener('click', function() {
   console.log("Hi")
+  alert("Make sure to turn the captions on")
   chrome.runtime.sendMessage({ action: "startCapturing" });
 });
 

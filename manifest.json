@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Google Meet Captions Extractor",
+  "name": "MeetSummarizer",
   "version": "1.0",
   "description": "Extract captions from Google Meet and display them.",
   "permissions": ["activeTab"],
