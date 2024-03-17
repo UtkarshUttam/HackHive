@@ -4,7 +4,7 @@ let capturing = true; // Flag to control capturing
 function extractCaptions() {
     const captionsDiv = document.querySelector('div.iTTPOb.VbkSUe');
     if (!captionsDiv) return null;
-    alert("HEEEEEEEEEEEEEEE")
+    // alert("HEEEEEEEEEEEEEEE")
 
     // Get all child spans within the div
     const spans = captionsDiv.querySelectorAll('span');
