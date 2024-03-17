@@ -5,18 +5,20 @@ body {
   font-weight: bold;
   margin: 0;
   padding: 0;
-  background: url('./Background.png');
+  background:  rgba(17, 25, 40, 0.76) url('./Background.png');
   min-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; /* This ensures the content is centered vertically */
+  backdrop-filter: blur(8px) saturate(200%);
+
 }
 
 .container {
   width: 250px;
   padding: 20px;
-  color: wheat;
+  color: #FFE5E5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,28 +34,43 @@ h2 {
   justify-content: center;
 }
 
+
 button {
-  border-radius: 25px;
-  color: white;
-  padding: 5%;
+  border-radius: 20px;
+  color: #ffffff;
+  padding: 25px;
+  font-size: 18px;
   margin: 5px;
+  min-width: 150px;
   font-weight: bold;
-  background-color: #b21607;
+  /* background-color: #d2d2d2; */
+
+  backdrop-filter: blur(8px) saturate(200%);
+  -webkit-backdrop-filter: blur(8px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.76);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 button:hover {
-  color: #000000;
-  background-color: yellow;
+  color: #FFE5E5;
+  background-color: #AC87C5;
   cursor: pointer;
 }
+
 
 #captions {
   border: 1px solid #ccc;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  color: #000000;
+  /* background: #595959; */
+  color: #d6d6d6;
   overflow-y: auto;
   font-size: 25px;
   min-height: 300px;
   min-width: 435px;
+  backdrop-filter: blur(8px) saturate(200%);
+  -webkit-backdrop-filter: blur(8px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.76);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
